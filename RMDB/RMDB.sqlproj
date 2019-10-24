@@ -69,19 +69,15 @@
     <Folder Include="Scoring\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Scoring\Tables\ScoreParam.sql" />
-    <Build Include="Scoring\Tables\ScoreCard.sql" />
-    <Build Include="Scoring\Tables\ScoreCardParams.sql" />
-    <Build Include="Scoring\Functions\fn_get_scorerate.sql" />
-    <Build Include="Scoring\Functions\ft_get_scoreparams.sql" />
     <Build Include="Scoring\Stored Procedures\sp_Calc_ScoreParams.sql" />
     <Build Include="Security\Scoring.sql" />
-    <Build Include="Scoring\Tables\AppScoreParams.sql" />
     <Build Include="Scoring\Tables\ActivityField.sql" />
     <Build Include="Scoring\Tables\ActivityFieldHistory.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_ins.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_upd.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_del.sql" />
+    <Build Include="Security\RoleRMUser.sql" />
+    <Build Include="Security\RoleITUser.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="RMDB.refactorlog" />
