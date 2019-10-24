@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="1c928b27-1209-4af7-8895-6df26e684582" ChangeDateTime="10/22/2019 13:48:42">
+    <Property Name="ElementName" Value="[Scoring].[AppScoreParams].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[AppScoreParams]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="APPID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a4468674-09a4-4019-a4a1-e18feabf4c95" ChangeDateTime="10/23/2019 14:26:30">
+    <Property Name="ElementName" Value="[Scoring].[ScoreCard].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreCard]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d4c02acb-55dd-4ccc-aa2b-1e4983ad582f" ChangeDateTime="10/23/2019 14:26:32">
+    <Property Name="ElementName" Value="[Scoring].[ScoreCard].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreCard]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NAME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9d12956c-951e-4149-bd19-972ff1d9d9f4" ChangeDateTime="10/23/2019 14:26:36">
+    <Property Name="ElementName" Value="[Scoring].[ScoreCard].[Description]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreCard]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DESCRIPTION" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dae75f39-82d8-47c1-b9b1-bae2657db589" ChangeDateTime="10/23/2019 14:26:42">
+    <Property Name="ElementName" Value="[Scoring].[ScoreParam].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreParam]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4c3c0023-ca1f-4c9c-a75b-53efe683454a" ChangeDateTime="10/23/2019 14:26:43">
+    <Property Name="ElementName" Value="[Scoring].[ScoreParam].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreParam]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="867e1bbf-89a9-4fe1-a75f-cf5b22bca942" ChangeDateTime="10/23/2019 14:26:47">
+    <Property Name="ElementName" Value="[Scoring].[ScoreParam].[ME]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreParam]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NAME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2c8e21b5-c03d-45bc-b5ff-952bb1981619" ChangeDateTime="10/23/2019 14:26:51">
+    <Property Name="ElementName" Value="[Scoring].[ScoreParam].[Description]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreParam]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DESCRIPTION" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4a633605-4806-4f11-95dc-a2c49176ed42" ChangeDateTime="10/23/2019 14:26:57">
+    <Property Name="ElementName" Value="[Scoring].[ScoreParam].[fl_disabled]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreParam]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FL_DISABLED" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e4e14209-b5f3-496e-b07a-5486034d51d1" ChangeDateTime="10/23/2019 14:27:11">
+    <Property Name="ElementName" Value="[Scoring].[ScoreCardParams].[ScoreCardId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreCardParams]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SCORECARDID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d78ae118-398c-457a-b4d7-511469c43821" ChangeDateTime="10/23/2019 14:27:15">
+    <Property Name="ElementName" Value="[Scoring].[ScoreCardParams].[ScoreParamId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ScoreCardParams]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SCOREPARAMID" />
+  </Operation>
+</Operations>

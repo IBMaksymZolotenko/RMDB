@@ -8,13 +8,13 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{61b54ba8-850b-492b-a131-30a5a92b0512}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
     <RootNamespace>RMDB</RootNamespace>
     <AssemblyName>RMDB</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1058,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -23,6 +23,9 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Ukrainian_CP1251_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <Recovery>SIMPLE</Recovery>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -57,5 +60,30 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Scoring\" />
+    <Folder Include="Scoring\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="Scoring\Functions\" />
+    <Folder Include="Scoring\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Scoring\Tables\ScoreParam.sql" />
+    <Build Include="Scoring\Tables\ScoreCard.sql" />
+    <Build Include="Scoring\Tables\ScoreCardParams.sql" />
+    <Build Include="Scoring\Functions\fn_get_scorerate.sql" />
+    <Build Include="Scoring\Functions\ft_get_scoreparams.sql" />
+    <Build Include="Scoring\Stored Procedures\sp_Calc_ScoreParams.sql" />
+    <Build Include="Security\Scoring.sql" />
+    <Build Include="Scoring\Tables\AppScoreParams.sql" />
+    <Build Include="Scoring\Tables\ActivityField.sql" />
+    <Build Include="Scoring\Tables\ActivityFieldHistory.sql" />
+    <Build Include="Scoring\Stored Procedures\sp_ActivityField_ins.sql" />
+    <Build Include="Scoring\Stored Procedures\sp_ActivityField_upd.sql" />
+    <Build Include="Scoring\Stored Procedures\sp_ActivityField_del.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="RMDB.refactorlog" />
   </ItemGroup>
 </Project>
