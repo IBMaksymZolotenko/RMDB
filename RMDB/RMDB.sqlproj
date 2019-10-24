@@ -78,6 +78,7 @@
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_del.sql" />
     <Build Include="Security\RoleRMUser.sql" />
     <Build Include="Security\RoleITUser.sql" />
+    <Build Include="Security\RoleRMUserExt.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="RMDB.refactorlog" />
