@@ -83,4 +83,7 @@
   <ItemGroup>
     <RefactorLog Include="RMDB.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Security\Grants.PostDeployment.sql" />
+  </ItemGroup>
 </Project>
