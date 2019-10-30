@@ -14,9 +14,19 @@
 #### Елементи схеми
 | ТИП | НАЗВА | ОПИС |
 |:-----------|-----------------------------------|-----------|
-| Table | ActivityField | Сфера діяльності |
+| Table | <a href="#ActivityField">ActivityField</a> | Сфера діяльності |
 | Table | ActivityFieldHistory | Історія зміни записів у таблиці ActivityField |
 | Proc | sp_Calc_ScoreParams | Розрахунок скорингових параметрів |
 | Proc | sp_ActivityField_ins | Додає запис у ActivityField |
 | Proc | sp_ActivityField_upd | Оновлює запис у ActivityField |
 | Proc | sp_ActivityField_del | Видаляє запис з ActivityField |
+
+---
+
+#### <span id = "ActivityField"/>ActivityField
+| НАЗВА | ОПИС |
+|-----------------------------------|-----------|
+| ID | ID |
+| POSITION | Посада |
+| FIELD_OF_ACTIVITY | Сфера діяльності |
+| DESCRIPTION | Опис |
