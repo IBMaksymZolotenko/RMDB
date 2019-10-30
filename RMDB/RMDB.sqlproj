@@ -26,6 +26,10 @@
     <DefaultCollation>SQL_Ukrainian_CP1251_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
     <Recovery>SIMPLE</Recovery>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Hours</ChangeTrackingRetentionUnit>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -67,23 +71,52 @@
     <Folder Include="Security\" />
     <Folder Include="Scoring\Functions\" />
     <Folder Include="Scoring\Stored Procedures\" />
+    <Folder Include="Security\Users" />
+    <Folder Include="Security\Logins" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Security\Roles" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Scoring\Stored Procedures\sp_Calc_ScoreParams.sql" />
-    <Build Include="Security\Scoring.sql" />
     <Build Include="Scoring\Tables\ActivityField.sql" />
     <Build Include="Scoring\Tables\ActivityFieldHistory.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_ins.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_upd.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_del.sql" />
-    <Build Include="Security\RoleRMUser.sql" />
-    <Build Include="Security\RoleITUser.sql" />
-    <Build Include="Security\RoleRMUserExt.sql" />
+    <Build Include="Security\Users\VUstinov.sql" />
+    <Build Include="Security\Schemas\Scoring.sql" />
+    <Build Include="Security\Roles\RoleITUser.sql" />
+    <Build Include="Security\Roles\RoleRMDev.sql" />
+    <Build Include="Security\Roles\RoleRMUser.sql" />
+    <Build Include="Security\Roles\RoleRMUserExt.sql" />
+    <Build Include="Security\Logins\VUstinov.sql" />
+    <Build Include="Security\Logins\SGromov.sql" />
+    <Build Include="Security\Logins\IBorushchak.sql" />
+    <Build Include="Security\Logins\CLSRobot.sql" />
+    <Build Include="Security\Logins\MZolotenko.sql" />
+    <Build Include="Security\Logins\OSorochynskyi.sql" />
+    <Build Include="Security\Logins\USemenyshyn.sql" />
+    <Build Include="Security\Logins\YaHembarovska.sql" />
+    <Build Include="Security\Users\ASukhliak.sql" />
+    <Build Include="Security\Users\MZolotenko.sql" />
+    <Build Include="Security\Users\OSorochynskyi.sql" />
+    <Build Include="Security\Users\USemenyshyn.sql" />
+    <Build Include="Security\Users\YaHembarovska.sql" />
+    <Build Include="Security\Users\CLSRobot.sql" />
+    <Build Include="Security\Users\IBorushchak.sql" />
+    <Build Include="Security\Users\SGromov.sql" />
+    <Build Include="Security\Logins\ASukhliak.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="RMDB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Security\Grants.PostDeployment.sql" />
+    <PostDeploy Include="Security\PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RMDB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Security\PreDeployment.sql" />
   </ItemGroup>
 </Project>
