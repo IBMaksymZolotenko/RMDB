@@ -13,20 +13,13 @@
 
 #### Елементи схеми
 | ТИП | НАЗВА | ОПИС |
-<<<<<<< HEAD
 |:-----------|:-----------------------------------|:-----------|
 | Table | <a href="#ActivityField">ActivityField</a> | Сфера діяльності |
 | Table | <a href="#ActivityFieldHistory">ActivityFieldHistory</a> | Історія зміни записів у таблиці ActivityField |
-=======
-|:-----------|-----------------------------------|-----------|
-| Table | ActivityField | Сфера діяльності |
-| Table | ActivityFieldHistory | Історія зміни записів у таблиці ActivityField |
->>>>>>> 482a4a2ccc697c5dae5e9f0e9cc6d060b10f1780
 | Proc | sp_Calc_ScoreParams | Розрахунок скорингових параметрів |
 | Proc | sp_ActivityField_ins | Додає запис у ActivityField |
 | Proc | sp_ActivityField_upd | Оновлює запис у ActivityField |
 | Proc | sp_ActivityField_del | Видаляє запис з ActivityField |
-<<<<<<< HEAD
 
 ---
 
@@ -48,5 +41,3 @@
 | ACTIVITYFIELDID | ID з ActivityField | INT |
 | *Інші поля подібні до ActivityField* | ... | ... |
 | HCREATED | Дата створення запису у ActivityFieldHistory | DATETIME2(7) |
-=======
->>>>>>> 482a4a2ccc697c5dae5e9f0e9cc6d060b10f1780
