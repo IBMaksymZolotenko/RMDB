@@ -77,4 +77,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="SCOREPARAMID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="9bb30d0d-25dc-41ac-860b-6b2980df3a7a" ChangeDateTime="10/31/2019 13:26:03">
+    <Property Name="ElementName" Value="[Scoring].[ActivityFieldHistory].[SCORING_ACTIVITY_FIELD_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Scoring].[ActivityFieldHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ACTIVITYFIELDID" />
+  </Operation>
 </Operations>
