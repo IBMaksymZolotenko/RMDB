@@ -32,7 +32,6 @@
     <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
     <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     <DebugType>pdbonly</DebugType>
@@ -60,6 +59,17 @@
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SomeConfiguration|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
@@ -73,9 +83,9 @@
     <Folder Include="Scoring\Stored Procedures\" />
     <Folder Include="Security\Schemas" />
     <Folder Include="Security\Roles" />
-    <Folder Include="Security\_NoBuild" />
-    <Folder Include="Security\_NoBuild\Logins" />
-    <Folder Include="Security\_NoBuild\Users" />
+    <Folder Include="_NoBuild" />
+    <Folder Include="_NoBuild\Logins" />
+    <Folder Include="_NoBuild\Users" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Scoring\Stored Procedures\sp_Calc_ScoreParams.sql" />
@@ -89,27 +99,27 @@
     <Build Include="Security\Roles\RoleRMDev.sql" />
     <Build Include="Security\Roles\RoleRMUser.sql" />
     <Build Include="Security\Roles\RoleRMUserExt.sql" />
-    <None Include="Security\_NoBuild\Logins\ASukhliak.sql" />
-    <None Include="Security\_NoBuild\Logins\CLSRobot.sql" />
-    <None Include="Security\_NoBuild\Logins\IBorushchak.sql" />
-    <None Include="Security\_NoBuild\Logins\MZolotenko.sql" />
-    <None Include="Security\_NoBuild\Logins\OSorochynskyi.sql" />
-    <None Include="Security\_NoBuild\Logins\RTrykur.sql" />
-    <None Include="Security\_NoBuild\Logins\SGromov.sql" />
-    <None Include="Security\_NoBuild\Logins\USemenyshyn.sql" />
-    <None Include="Security\_NoBuild\Logins\VUstinov.sql" />
-    <None Include="Security\_NoBuild\Logins\YaHembarovska.sql" />
-    <None Include="Security\_NoBuild\Users\ASukhliak.sql" />
-    <None Include="Security\_NoBuild\Users\CLSRobot.sql" />
-    <None Include="Security\_NoBuild\Users\IBorushchak.sql" />
-    <None Include="Security\_NoBuild\Users\MZolotenko.sql" />
-    <None Include="Security\_NoBuild\Users\OSorochynskyi.sql" />
-    <Build Include="Security\_NoBuild\Users\RTrykur.sql" />
-    <None Include="Security\_NoBuild\Users\SGromov.sql" />
-    <None Include="Security\_NoBuild\Users\USemenyshyn.sql" />
-    <None Include="Security\_NoBuild\Users\VUstinov.sql" />
-    <None Include="Security\_NoBuild\Users\YaHembarovska.sql" />
-    <None Include="Security\_NoBuild\LoginUserGrants.sql" />
+    <None Include="_NoBuild\Logins\ASukhliak.sql" />
+    <None Include="_NoBuild\Logins\CLSRobot.sql" />
+    <None Include="_NoBuild\Logins\IBorushchak.sql" />
+    <None Include="_NoBuild\Logins\MZolotenko.sql" />
+    <None Include="_NoBuild\Logins\OSorochynskyi.sql" />
+    <None Include="_NoBuild\Logins\RTrykur.sql" />
+    <None Include="_NoBuild\Logins\SGromov.sql" />
+    <None Include="_NoBuild\Logins\USemenyshyn.sql" />
+    <None Include="_NoBuild\Logins\VUstinov.sql" />
+    <None Include="_NoBuild\Logins\YaHembarovska.sql" />
+    <None Include="_NoBuild\Users\ASukhliak.sql" />
+    <None Include="_NoBuild\Users\CLSRobot.sql" />
+    <None Include="_NoBuild\Users\IBorushchak.sql" />
+    <None Include="_NoBuild\Users\MZolotenko.sql" />
+    <None Include="_NoBuild\Users\OSorochynskyi.sql" />
+    <Build Include="_NoBuild\Users\RTrykur.sql" />
+    <None Include="_NoBuild\Users\SGromov.sql" />
+    <None Include="_NoBuild\Users\USemenyshyn.sql" />
+    <None Include="_NoBuild\Users\VUstinov.sql" />
+    <None Include="_NoBuild\Users\YaHembarovska.sql" />
+    <None Include="_NoBuild\LoginUserGrants.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="RMDB.refactorlog" />
@@ -119,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="RMDB.publish.xml" />
+    <None Include="_NoBuild\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="Security\PreDeployment.sql" />
