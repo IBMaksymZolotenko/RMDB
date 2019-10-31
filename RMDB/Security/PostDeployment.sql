@@ -10,16 +10,16 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-exec sp_addrolemember 'RoleRMUser', 'Bankgroup\ASukhliak';
-exec sp_addrolemember 'RoleRMUser', 'CLSRobot';
-exec sp_addrolemember 'RoleRMUser', 'IBorushchak';
-exec sp_addrolemember 'RoleRMUser', 'Bankgroup\MZolotenko';
-exec sp_addrolemember 'RoleRMUser', 'Bankgroup\OSorochynskyi';
-exec sp_addrolemember 'RoleRMUser', 'SGromov';
-exec sp_addrolemember 'RoleRMUser', 'Bankgroup\USemenyshyn';
-exec sp_addrolemember 'RoleRMUser', 'Bankgroup\VUstinov';
-exec sp_addrolemember 'RoleRMUser', 'Bankgroup\YaHembarovska';
-go
+--exec sp_addrolemember 'RoleRMDev', 'Bankgroup\ASukhliak';
+--exec sp_addrolemember 'RoleITUser', 'CLSRobot';
+--exec sp_addrolemember 'RoleRMUserExt', 'IBorushchak';
+--exec sp_addrolemember 'RoleRMDev', 'Bankgroup\MZolotenko';
+--exec sp_addrolemember 'RoleRMUser', 'Bankgroup\OSorochynskyi';
+--exec sp_addrolemember 'RoleITUser', 'SGromov';
+--exec sp_addrolemember 'RoleRMUser', 'Bankgroup\USemenyshyn';
+--exec sp_addrolemember 'RoleRMUser', 'Bankgroup\VUstinov';
+--exec sp_addrolemember 'RoleRMUser', 'Bankgroup\YaHembarovska';
+--go
 
 --	доступ до інтерфейсу
 grant select on [Scoring].[ActivityField] to [RoleITUser]
@@ -40,17 +40,11 @@ grant execute on [Scoring].[sp_ActivityField_upd] to [RoleRMUserExt]
 go
 
 --	користувачі ДпУР - розробиники з максимально можливим доступом
-grant select on [Scoring].[ActivityField] to [RoleRMDev]
-grant select on [Scoring].[ActivityFieldHistory] to [RoleRMDev]
+grant select, insert, update, delete on [Scoring].[ActivityField] to [RoleRMDev]
+grant select, insert, update, delete on [Scoring].[ActivityFieldHistory] to [RoleRMDev]
 
 grant execute on [Scoring].[sp_Calc_ScoreParams] to [RoleRMDev]
 grant execute on [Scoring].[sp_ActivityField_ins] to [RoleRMDev]
 grant execute on [Scoring].[sp_ActivityField_del] to [RoleRMDev]
 grant execute on [Scoring].[sp_ActivityField_upd] to [RoleRMDev]
-go
-
-exec	sp_addrolemember 'RoleITUser', 'SGromov'
-go
-
-exec	sp_addrolemember 'RoleITUser', 'CLSRobot'
 go

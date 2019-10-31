@@ -4,7 +4,7 @@
 --	
 CREATE PROCEDURE [Scoring].[sp_ActivityField_del]
 	@aID						INT
-WITH ENCRYPTION
+--WITH ENCRYPTION
 AS
 	SET NOCOUNT ON;
 

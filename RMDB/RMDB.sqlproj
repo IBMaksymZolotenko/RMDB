@@ -71,10 +71,11 @@
     <Folder Include="Security\" />
     <Folder Include="Scoring\Functions\" />
     <Folder Include="Scoring\Stored Procedures\" />
-    <Folder Include="Security\Users" />
-    <Folder Include="Security\Logins" />
     <Folder Include="Security\Schemas" />
     <Folder Include="Security\Roles" />
+    <Folder Include="Security\_NoBuild" />
+    <Folder Include="Security\_NoBuild\Logins" />
+    <Folder Include="Security\_NoBuild\Users" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Scoring\Stored Procedures\sp_Calc_ScoreParams.sql" />
@@ -83,29 +84,32 @@
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_ins.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_upd.sql" />
     <Build Include="Scoring\Stored Procedures\sp_ActivityField_del.sql" />
-    <Build Include="Security\Users\VUstinov.sql" />
     <Build Include="Security\Schemas\Scoring.sql" />
     <Build Include="Security\Roles\RoleITUser.sql" />
     <Build Include="Security\Roles\RoleRMDev.sql" />
     <Build Include="Security\Roles\RoleRMUser.sql" />
     <Build Include="Security\Roles\RoleRMUserExt.sql" />
-    <Build Include="Security\Logins\VUstinov.sql" />
-    <Build Include="Security\Logins\SGromov.sql" />
-    <Build Include="Security\Logins\IBorushchak.sql" />
-    <Build Include="Security\Logins\CLSRobot.sql" />
-    <Build Include="Security\Logins\MZolotenko.sql" />
-    <Build Include="Security\Logins\OSorochynskyi.sql" />
-    <Build Include="Security\Logins\USemenyshyn.sql" />
-    <Build Include="Security\Logins\YaHembarovska.sql" />
-    <Build Include="Security\Users\ASukhliak.sql" />
-    <Build Include="Security\Users\MZolotenko.sql" />
-    <Build Include="Security\Users\OSorochynskyi.sql" />
-    <Build Include="Security\Users\USemenyshyn.sql" />
-    <Build Include="Security\Users\YaHembarovska.sql" />
-    <Build Include="Security\Users\CLSRobot.sql" />
-    <Build Include="Security\Users\IBorushchak.sql" />
-    <Build Include="Security\Users\SGromov.sql" />
-    <Build Include="Security\Logins\ASukhliak.sql" />
+    <None Include="Security\_NoBuild\Logins\ASukhliak.sql" />
+    <None Include="Security\_NoBuild\Logins\CLSRobot.sql" />
+    <None Include="Security\_NoBuild\Logins\IBorushchak.sql" />
+    <None Include="Security\_NoBuild\Logins\MZolotenko.sql" />
+    <None Include="Security\_NoBuild\Logins\OSorochynskyi.sql" />
+    <None Include="Security\_NoBuild\Logins\RTrykur.sql" />
+    <None Include="Security\_NoBuild\Logins\SGromov.sql" />
+    <None Include="Security\_NoBuild\Logins\USemenyshyn.sql" />
+    <None Include="Security\_NoBuild\Logins\VUstinov.sql" />
+    <None Include="Security\_NoBuild\Logins\YaHembarovska.sql" />
+    <None Include="Security\_NoBuild\Users\ASukhliak.sql" />
+    <None Include="Security\_NoBuild\Users\CLSRobot.sql" />
+    <None Include="Security\_NoBuild\Users\IBorushchak.sql" />
+    <None Include="Security\_NoBuild\Users\MZolotenko.sql" />
+    <None Include="Security\_NoBuild\Users\OSorochynskyi.sql" />
+    <Build Include="Security\_NoBuild\Users\RTrykur.sql" />
+    <None Include="Security\_NoBuild\Users\SGromov.sql" />
+    <None Include="Security\_NoBuild\Users\USemenyshyn.sql" />
+    <None Include="Security\_NoBuild\Users\VUstinov.sql" />
+    <None Include="Security\_NoBuild\Users\YaHembarovska.sql" />
+    <None Include="Security\_NoBuild\LoginUserGrants.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="RMDB.refactorlog" />

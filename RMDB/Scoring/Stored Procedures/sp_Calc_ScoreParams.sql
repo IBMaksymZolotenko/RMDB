@@ -9,7 +9,7 @@ CREATE PROCEDURE [Scoring].[sp_Calc_ScoreParams]
 	@aROWID				INT,
 	@aDATE				DATETIME,
 	@aDEBUG				BIT = 0
-WITH ENCRYPTION
+--WITH ENCRYPTION
 AS
 
 BEGIN TRY
@@ -26,7 +26,7 @@ BEGIN TRY
 	--	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	ПРИ ПЕРЕНОСІ НА ПРОД ЦЕЙ ЛІНК ПОТРІБНО ПЕРЕПИСАТИ НА АКТУАЛЬНИЙ ЛІНК НА ПРОД Б2 !!!!!!!!!!!!!!!
 	--	
 	DECLARE @B2_LINK	VARCHAR(100)	=	'B2ORACLE_SC';
-	DECLARE @PKG		VARCHAR(100)	=	'MZOLOTENKO.PKG_IDEA_RM';
+	DECLARE @PKG		VARCHAR(100)	=	'CREATOR.PKG_IDEA_RM';
 	DECLARE @isMBKIID	INT				=	777;
 
 	DECLARE @PARAMS
