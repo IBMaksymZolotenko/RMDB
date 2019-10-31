@@ -15,7 +15,7 @@
 | ТИП | НАЗВА | ОПИС |
 |:-----------|:-----------------------------------|:-----------|
 | Table | <a href="#ActivityField">ActivityField</a> | Сфера діяльності |
-| Table | ActivityFieldHistory | Історія зміни записів у таблиці ActivityField |
+| Table | <a href="#ActivityFieldHistory">ActivityFieldHistory</a> | Історія зміни записів у таблиці ActivityField |
 | Proc | sp_Calc_ScoreParams | Розрахунок скорингових параметрів |
 | Proc | sp_ActivityField_ins | Додає запис у ActivityField |
 | Proc | sp_ActivityField_upd | Оновлює запис у ActivityField |
@@ -24,9 +24,20 @@
 ---
 
 #### <span id = "ActivityField"/>ActivityField
-| НАЗВА | ОПИС |
-|:-----------------------------------|:-----------|
-| ID | ID |
-| POSITION | Посада |
-| FIELD_OF_ACTIVITY | Сфера діяльності |
-| DESCRIPTION | Опис |
+| НАЗВА | ОПИС | ТИП ДАНИХ |
+|:-----------------------------------|:-----------|:-----------|
+| ID | Унікальний ідетнифікатор запису | INT |
+| POSITION | Посада | NVARCHAR(200) |
+| FIELD_OF_ACTIVITY | Сфера діяльності | NVARCHAR(200) |
+| DESCRIPTION | Опис | NVARCHAR(MAX) |
+| GROUP_FIELD_OF_ACTIVITY | Сфера діяльності, узагальнена назва (визначається ДпУР) | NVARCHAR(200) |
+| GROUP_POSITION | Посада, узагальнена назва (визначається ДпУР) | NVARCHAR(200) |
+| *службові поля* | ... | ... |
+
+#### <span id = "ActivityFieldHistory"/>ActivityFieldHistory
+| НАЗВА | ОПИС | ТИП ДАНИХ |
+|:-----------------------------------|:-----------|:-----------|
+| ID | Унікальний ідетнифікатор запису | INT |
+| ACTIVITYFIELDID | ID з ActivityField | INT |
+| *Інші поля подібні до ActivityField* | ... | ... |
+| HCREATED | Дата створення запису у ActivityFieldHistory | DATETIME2(7) |
