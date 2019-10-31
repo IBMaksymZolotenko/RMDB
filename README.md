@@ -39,5 +39,5 @@
 |:-----------------------------------|:-----------|:-----------|
 | ID | Унікальний ідетнифікатор запису | INT |
 | ACTIVITYFIELDID | ID з ActivityField | INT |
-| *Інші поля подібні до ActivityField* | ... | ... |
+| *інші поля подібні до ActivityField* | ... | ... |
 | HCREATED | Дата створення запису у ActivityFieldHistory | DATETIME2(7) |
