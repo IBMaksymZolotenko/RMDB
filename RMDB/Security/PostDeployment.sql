@@ -48,3 +48,7 @@ grant execute on [Scoring].[sp_ActivityField_ins] to [RoleRMDev]
 grant execute on [Scoring].[sp_ActivityField_del] to [RoleRMDev]
 grant execute on [Scoring].[sp_ActivityField_upd] to [RoleRMDev]
 go
+/*
+
+
+*/
