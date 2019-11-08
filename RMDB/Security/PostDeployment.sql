@@ -50,5 +50,4 @@ grant execute on [Scoring].[sp_ActivityField_upd] to [RoleRMDev]
 go
 /*
 
-
 */

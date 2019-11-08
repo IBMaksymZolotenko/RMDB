@@ -1,15 +1,14 @@
 ﻿--	-------------------------------------------------------------------------------------------------------------------------------
 --
---		2019-09-10, Золотенко М.
+--		2019-11-08, Золотенко М.
 --
 --		Розрахунок параметрів для нового скорингу
+--			Варіант для бази Decision
 --
---
-CREATE PROCEDURE [Scoring].[sp_Calc_ScoreParams]
+CREATE PROCEDURE [dbo].[sp_Calc_ScoreParams]
 	@aROWID				INT,
 	@aDATE				DATETIME,
 	@aDEBUG				BIT = 0
---WITH ENCRYPTION
 AS
 BEGIN TRY
 
