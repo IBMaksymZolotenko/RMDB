@@ -44,3 +44,5 @@
 | ACTIVITYFIELDID | ID з ActivityField | INT |
 | *інші поля подібні до ActivityField* | ... | ... |
 | HCREATED | Дата створення запису у ActivityFieldHistory | DATETIME2(7) |
+
+---
